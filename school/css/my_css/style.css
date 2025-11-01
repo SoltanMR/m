@@ -1,0 +1,1117 @@
+/* ---------------------------------------- variable ---------------------------------------- */
+:root {
+    --primary-blue: #3498db;
+    --secondary-blue: #2980b9;
+    --primary-purple: #9b59b6;
+    --secondary-purple: #8e44ad;
+    --dark-mode-bg: #1a1a1a;
+    --dark-mode-text: #f8f9fa;
+}
+
+/* ---------------------------------------- CSS Reaset ---------------------------------------- */
+
+a {
+    text-decoration: none;
+}
+/* ---------------------------------------- Animation For The Elements ---------------------------------------- */
+* {
+    animation-delay: 0s;
+    animation-duration: 1.5s;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* ---------------------------------------- Background Color For Elements ---------------------------------------- */
+.gradient-bg {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    color: #fff;
+}
+
+.gradient-bg-reverse {
+    background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+    color: #fff;
+}
+
+/* ---------------------------------------- Wavey Affect For Elements ---------------------------------------- */
+.wavey-affect {
+    height: 100%;
+}
+
+.wavey-affect svg {
+    margin-right: -7px;
+    height: 100%;
+    width: 100%;
+    fill: var(--primary-blue);
+}
+
+/* ---------------------------------------- button login ---------------------------------------- */
+.btn-login {
+    font-weight: 600;
+    padding: 0.25rem 0.5rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 1000px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-login i {
+    vertical-align: sub;
+}
+
+.btn-login:hover {
+    color: black;
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ---------------------------------------- Button Dark Mode For Website ---------------------------------------- */
+.btn-darkmode {
+    background-color: #333;
+    color: #fff;
+    border: none;
+}
+
+.lbl-darkmode-toggle {
+    width: 75px;
+    height: 35px;
+    position: relative;
+    display: block;
+    background-color: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    transition: 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.lbl-darkmode-toggle:after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.lbl-darkmode-toggle:active:after,
+.lbl-darkmode-toggle:hover:after {
+    width: 37px;
+}
+
+.lbl-darkmode-toggle i {
+    position: absolute;
+    font-size: 1.2rem;
+    z-index: 100;
+    top: 8px;
+}
+
+.lbl-darkmode-toggle i.sun-darkmode-toggle {
+    left: 8px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.lbl-darkmode-toggle i.moon-darkmode-toggle {
+    left: 47px;
+    color: #7e7e7e;
+    transition: 0.3s;
+}
+
+.input-darkmode-toggle {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.dark-btn-on+.lbl-darkmode-toggle {
+    background-color: #242424;
+}
+
+.dark-btn-on+.lbl-darkmode-toggle:after {
+    left: 71px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+.dark-btn-on+.lbl-darkmode-toggle i.sun-darkmode-toggle {
+    color: #7e7e7e;
+}
+
+.dark-btn-on+.lbl-darkmode-toggle i.moon-darkmode-toggle {
+    color: #fff;
+}
+
+/* ---------------------------------------- Button About Us ---------------------------------------- */
+.btn-more {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    font-weight: 600;
+    padding: 0.5rem 3rem;
+    margin-top: 4rem;
+}
+
+.btn-more:hover {
+    color: black;
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------------------------------------- Button With Gradient Background ---------------------------------------- */
+.btn-gradient {
+    padding: 0.3rem 1.3rem;
+    border: none;
+    background: #f0f0f0;
+    color: #1d1d1d;
+    border-radius: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transition: background ease 0.3s; */
+    transition: all ease 0.3s;
+}
+
+.btn-gradient:after {
+    content: "";
+    position: absolute;
+    width: 104%;
+    height: 112%;
+    border-radius: 1000px;
+    color: var(--dark-mode-text);
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    z-index: -1;
+}
+
+.btn-gradient:hover {
+    /* z-index: 0; */
+    /* box-shadow: 40px 0 100px rgba(52, 152, 219, 0.3), -40px 0px 100px rgba(155, 89, 182, 0.3); */
+    /* background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); */
+        box-shadow: 20px 0 50px rgba(52, 152, 219, 0.3), -20px 0px 50px rgba(155, 89, 182, 0.3);
+
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)) !important;
+}
+
+/* ---------------------------------------- Header ---------------------------------------- */
+/* ----------------- Header Menu ----------------- */
+nav {
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 0rem 0rem 1.5rem 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.fallow-us__icon ul li img:hover {
+    transform: translateY(-3px);
+}
+
+.nav-item-affect::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 0.3rem;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+}
+
+.nav-item-affect:hover:after {
+    opacity: 1;
+    width: 80%;
+}
+
+.nav-item:last-child {
+    border-bottom: 0px;
+}
+
+/* ----------------- Navebar User Profile ----------------- */
+.nav__user{
+    transition: all 0.3s ease-in;
+}
+
+.nav__user a{
+    transition: all 0.3s ease-in;
+}
+
+.nav__user:hover a{
+    color: #000 !important;
+}
+
+.nav__user a i {
+    padding: 11.2px;
+    border: 2px solid #fff;
+}
+
+.nav__user a i,
+.nav__user a div {
+    width: 41px;
+    height: 41px;
+    transition: background-color 0.3s ease-in, box-shadow 0.4s ease-in;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.nav__user a div {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav__user:hover div {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.nav__user:hover i {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* ----------------- Header Level-1-Menu ----------------- */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-items {
+    position: absolute;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    width: 12rem;
+    right: 1.7rem;
+    top: 2.8rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateY(5rem);
+    list-style-type: none;
+}
+
+.nav-dropdown-items li:nth-child(2) {
+    border-top: 2px solid #fff;
+}
+
+.nav-dropdown-items li {
+    padding: 0.7rem 0;
+    transition: all 0.3 ease;
+}
+
+.nav-dropdown-items li a:hover,
+.nav-dropdown-items li a:hover i {
+    font-size: 1.05rem;
+}
+
+.nav-dropdown-items li a {
+    color: #fff;
+}
+
+
+.nav-dropdown:hover .nav-dropdown-items {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-dropdown-items-md {
+    background-color: var(--dark-mode-text);
+    padding: 0px;
+    border-radius: 8px;
+    margin: 0px;
+    list-style-type: none;
+    visibility: hidden;
+    opacity: 0;
+    height: 0px;
+    transition: height 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+}
+
+.show__dropdown {
+    padding: 1.5rem;
+    margin: 0.2rem 1rem 1rem;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+
+.nav-dropdown-items-md li {
+    padding: 0.7rem 0;
+}
+
+.nav-dropdown-items-md li a {
+    color: var(--dark-mode-bg);
+}
+
+.nav-dropdown-items-md li:nth-child(2) {
+    border-top: 2px solid var(--dark-mode-bg);
+}
+
+.icon-dropdown-md {
+    background-color: #fff;
+    height: 25px;
+    width: 25px;
+    font-size: 0.8rem;
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.icon-dropdown-md-rotate {
+    transform: rotate(180deg);
+}
+
+
+/* ----------------- Header Contetnt ----------------- */
+.header__content {
+    position: relative;
+}
+
+.header__content-section {
+    z-index: 2;
+    position: absolute;
+    top: 2rem;
+}
+
+.header__content-img {
+    width: 100%;
+}
+
+.header__content-bg {
+    width: 100%;
+    height: 34rem;
+    background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple) 76%);
+    text-align: center;
+}
+
+.header__content-text {
+    color: #fff;
+    /* padding: 7rem 0 0 0; */
+}
+
+/* ---------------------------------------- Menu ---------------------------------------- */
+/* ----------------- Menu Title For Each Subject ----------------- */
+.section-title {
+    position: relative;
+    padding-bottom: 26px;
+    /* margin-bottom: 30px; */
+    padding-right: 4.1rem;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    right: 18px;
+    top: -6px;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    background-color: var(--primary-purple);
+    right: -7px;
+    top: -20px;
+}
+
+/* ----------------- Menu Tasks Or Card ----------------- */
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: #ededed;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-data {
+    /* font-size: 1.2rem; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0 0 0 8px;
+}
+
+.card-header {
+    border-bottom: 0px;
+    background-color: transparent;
+}
+
+.card-header i {
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+/* ----------------- Menu News ----------------- */
+.news__arrow {
+    font-size: 1.5rem;
+}
+
+.main__slider-item {
+    width: 100%;
+}
+
+/* ----------------- Menu Homeworks Exsams Table ----------------- */
+.btn-gradient-exams {
+    padding: 0.5rem 1rem;
+}
+
+/* ----------------- Main Alert ----------------- */
+.main__alert{
+    border-radius: 12px !important;
+}
+
+/* ---------------------------------------- Footer ---------------------------------------- */
+.footer {
+    color: #fff;
+    margin-top: 2rem;
+}
+
+.footer__conternt {
+    background: linear-gradient(180deg, var(--primary-blue), var(--primary-purple) 70%);
+}
+
+.footer__wavey-affect {
+    fill: var(--primary-blue);
+    stroke: none;
+}
+
+.footer a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer__fallow-us {
+    left: 10px;
+    bottom: 10px;
+    position: fixed;
+    z-index: 100;
+    visibility: visible !important;
+}
+
+/* ----------------- Main Alert ----------------- */
+.fallow-us {
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 1000px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-purple));
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.fallow-us__icon {
+    z-index: 105;
+    overflow: hidden;
+    transition: height 0.35s ease;
+    height: 0px;
+}
+
+.fallow-us__icon ul li img{
+    width: 32px;
+    height: 32px;
+    opacity: 0;
+    transition: opacity 0.35s ease, transform 0.3s ease-in;
+    cursor: pointer;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 50%;
+    transform: translateY(0px);
+}
+
+
+.fallow-us__btn {
+    z-index: 110;
+    height: 32px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: transparent;
+}
+
+.show__follow-us {
+    opacity: 1 !important;
+}
+
+/* ---------------------------------------- dark mode ----------------------------------------*/
+/* ----------------- Body ----------------- */
+.dark-mode {
+    background-color: var(--dark-mode-bg);
+    color: var(--dark-mode-text) !important;
+}
+
+/* ----------------- Menu Table Body ----------------- */
+.dark-mode th,
+td {
+    color: var(--dark-mode-text);
+}
+
+.dark-mode td {
+    color: var(--dark-mode-text) !important;
+    background-color: var(--dark-mode-bg) !important;
+}
+
+.dark-mode .table-hover>tbody>tr:hover>* {
+    --bs-table-color-state: #fff;
+    --bs-table-bg-state: #1e1d1d;
+}
+
+/* ----------------- Menu Card ----------------- */
+.dark-mode .card {
+    background-color: #2d2d2d;
+    color: var(--dark-mode-text);
+}
+
+.dark-mode .homework:hover {
+    box-shadow: 5px 0 17px rgba(52, 152, 219, 0.3), -5px 0px 17px rgba(155, 89, 182, 0.3);
+}
+
+.dark-mode .navbar {
+    background-color: #222 !important;
+}
+
+.dark-mode .nav-dropdown-items-md {
+    background-color: var(--dark-mode-bg) !important;
+}
+
+.dark-mode .nav-dropdown-items-md li:nth-child(2) {
+    border-top: 2px solid var(--dark-mode-text);
+}
+
+.dark-mode .nav-dropdown-items-md li a {
+    color: var(--dark-mode-text) !important;
+}
+
+.dark-mode .btn-gradient {
+    /* background-color: #1d1d1d; */
+    background: #1d1d1d;
+    color: #f0f0f0;
+}
+
+.dark-mode .btn-gradient:hover {
+    box-shadow: 20px 0 50px rgba(52, 152, 219, 0.3), -20px 0px 50px rgba(155, 89, 182, 0.3);
+}
+
+.dark-mode .statement .content-box-lg{
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.dark-mode .main__class {
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark-mode .fallow-us {
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .fallow-us:hover {
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* استایل‌های پایه برای عکس */
+.image-max-height {
+    max-height: 80vh;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.news-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.news-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.text-justify {
+    text-align: justify;
+    text-align-last: right; /* تراز آخرین خط به راست */
+    direction: rtl;
+    line-height: 1.8;
+    word-spacing:1px;
+    hyphens: auto; /* برای شکستن خودکار کلمات طولانی */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+.header__animation-text .text-justify { 
+    max-width: 450px;
+}
+
+.custom-close-btn i {
+    font-size: 1.2rem !important;
+}
+
+@media (min-width: 991.98px) and (max-width: 1200px) {
+    .header__animation-text .text-justify {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-justify {
+        max-width: 1000px;
+    }
+    .text-justify1{
+        margin-right: 25px;
+    }
+}
+
+/* تنظیمات برای نمایش بهتر در موبایل */
+@media (max-width: 768px) {
+    .justified-text-container {
+        line-height: 1.7;
+        font-size: 14px;
+        word-spacing: normal;
+    }
+    
+    .justified-line {
+        margin-bottom: 4px;
+    }
+}
+/* برای مرورگرهای قدیمی */
+@supports not (text-align-last: right) {
+    .text-justify::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+    
+    .text-content::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+    }
+    .text-trotate::after {
+        content: '';
+        display: inline-block;
+        width: 100%; 
+    }
+}
+
+/* Medium devices (tablets, less then 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /*------ Header ------*/
+    .header__animation-text .text-justify {
+        max-width: 280px;
+    }
+
+    .navbar-collapse{
+        padding: 15px 15px 15px 10px;
+        max-height: 90vh;  /* حداکثر ارتفاع تقریبی صفحه */
+        overflow-y: auto;  /* فعال کردن اسکرول عمودی */
+    }
+
+    .navbar-nav{
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .nav-link::after {
+        width: 0;
+        height: 0;
+    }
+
+    .nav-item {
+        padding: 1rem 0;
+        border-bottom: 2px solid #fff;
+    }
+
+    .header__content-img {
+        width: 118%;
+        margin-top: 14%;
+    }
+
+    .header__content-bg {
+        height: 28rem;
+    }
+    /*------ Button More And Login ------*/
+    .btn-more,
+    .btn-login {
+        color: #000;
+        background-color: #fff;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar__collapse-container {
+        flex-direction: column-reverse;
+    }
+}
+
+/* small devices (landscape phone, less then 768px) */
+@media (max-width: 767px) {
+
+    body {
+        font-size: 0.9375rem;
+    }
+
+    h1 {
+        font-size: 1.625rem !important;
+    }
+
+    h2 {
+        font-size: 1.375rem !important;
+    }
+    
+    h3 {
+        font-size: 1.1rem !important;
+    }
+
+    p, small, strong, button, label, input, textarea, td, th, a {
+        font-size: 14px !important;
+    }
+
+    span {
+        font-size: 12px !important;
+    }
+
+    span i {
+        font-size: 1.33rem !important;
+    }
+    .tech-statement-text span, 
+    .tech-statement-text p {
+        font-size: 1.7rem !important;
+    }
+
+    #status {
+        left: 44%;
+    }
+
+    /*------ Header ------*/
+    .navbar-collapse{
+        padding: 15px 15px 15px 10px;
+        border-radius: 10px;
+        margin-top: 10px;
+        max-height: 90vh;  /* حداکثر ارتفاع تقریبی صفحه */
+        overflow-y: auto;  /* فعال کردن اسکرول عمودی */
+    }
+    
+    .navbar__collapse-container {
+        flex-direction: column-reverse;
+    }
+    
+    .navbar-nav{
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .nav-link::after {
+        width: 0;
+        height: 0;
+    }
+
+    .nav-item {
+        padding: 1rem 0;
+        border-bottom: 2px solid #fff;
+    }
+    .header__animation-title {
+        text-align:center;
+        text-align-last: center;
+    }
+
+    .header__content-text {
+        padding-top: 2.5rem;
+    }
+    
+    .header__content-text div ul p{
+        width: 100% !important;
+    }
+
+    .header__content-img {
+        position: absolute;
+        z-index: 0;
+        top: 116px;
+        width: 24rem;
+        left: -6px;
+        opacity: 0.2;
+    }
+
+    .header__content-bg {
+        height: 27rem;
+    }
+
+    /*------ Button More And Login ------*/
+    .btn-more,
+    .btn-login {
+        color: #000;
+        background-color: #fff;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer__list {
+        width: 100%;
+        padding-bottom: 1rem;
+        position: relative;
+    }
+
+    .footer__list-border::after {
+        position: absolute;
+        content: '';
+        width: 80%;
+        margin: 0 auto;
+        height: 2px;
+        background-color: #fff;
+        bottom: 0;
+        left: 10%;
+    }
+
+    /* ------ Menu Exsams Table ------ */
+    .homeworks-td ,
+    .exams-td { 
+        min-width: 125px;
+    }
+
+    .table-responsive-md {
+        background: transparent;
+        padding: 0px;
+        border-radius: 0px;
+    }
+
+    thead{
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    }
+
+    .header__animation-text .text-justify {
+        text-align: center;
+        text-align-last: center;
+    }  
+
+    .fallow-us:hover {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    }
+}
+
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 991.98px) and (max-width: 1200px) {
+    .header__content-img {
+        margin-top: 10%;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+  .row.g-4 > .wow,
+  .row.mb-4 > .wow {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .mb-3.bbr {
+    margin-bottom: 0 !important;
+  }
+  .mt-4.bbt {
+    margin-top: 0 !important;
+  }
+}
+.navbar-toggler {
+    font-size: 15px !important;
+}
+
+.custom-error {
+  position: fixed;
+  background: linear-gradient(135deg, #6a00ff, #2d0076);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 25px;
+  border-radius: 12px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  top: 80px;
+  right: 0;
+  width: 25%;
+  z-index: 1000;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-size: 16px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+.error-container {
+  position: fixed;
+  top: 130px;
+  right: 0;
+  left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+.custom-error i {
+  margin-left: 8px;
+  font-size: 18px;
+}
+@media (max-width:580px){
+    .custom-error {
+  padding: 10px 10px;
+  top: 60px;
+  width: 40%;
+}
+}
+@media (max-width:300px){
+    .custom-error {
+  width: 70%;
+}
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+.back-button {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  border-radius: 1000px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'IRANSansX', sans-serif;
+  
+}
+.back-button-container {
+margin-top: 3.5rem !important;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(131, 131, 131, 0.3);
+  color: white;
+  background: linear-gradient(135deg,rgb(32, 32, 32),black);
+  padding: 12px 20px;
+}
+
+.back-button i {
+  font-size: 18px;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.back-button i:hover {
+    padding-left: 1rem;
+    padding-right: 0;
+}
+
+
+.return-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+    transition: all 0.4s ease 0.2s;
+  overflow: hidden;
+  transform-origin: center;
+  border-radius: 10%;
+  margin-top: 8rem;
+  
+}
+
+.return-btn .btn-text {
+  display: block;
+  font-size: 14px;
+}
+
+.return-btn .btn-icon {
+  display: none;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+/* حالت هاور */
+.return-btn:hover {
+  transform: rotate(1440deg);
+  border: none;
+  border-radius: 50%; /* تبدیل به دایره */
+  color: #ffffff;
+}
+
+.return-btn:hover .btn-text {
+  display: none;
+}
+
+.return-btn:hover .btn-icon {
+  display: block;
+}
+.text-end{
+    padding-bottom: 26px;
+}
+
+.footer__logo .school__logo-img {
+    width: 80px;
+}
+
+.school__logo-img {
+    width: 42px;
+}

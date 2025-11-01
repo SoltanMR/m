@@ -1,0 +1,376 @@
+/* ---------------------------------------- Root & Main ---------------------------------------- */
+:root {
+    --gradient-bg: linear-gradient(135deg, #3498db, #9b59b6);
+    --text-color: #fff;
+    --border-radius: 10px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+    margin: 5rem 0 8rem;
+}
+
+/* Background circles */
+main::after {
+    content: '';
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+    bottom: -19%;
+    left: -10%;
+    z-index: -1;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9b59b6, #3498db);
+    bottom: -8%;
+    left: 39%;
+    z-index: -1;
+}
+
+/* Main user section */
+.main__user {
+    background: rgba(176, 176, 176, 0.29);
+    border-radius: 10px;
+    position: relative;
+}
+
+.main__user::before {
+    content: '';
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9b59b6, #3498db);
+    bottom: 44%;
+    left: -5%;
+    z-index: -1;
+}
+
+/* ----------------- Profile ----------------- */
+.main__profile-card {
+    height: 782px;
+    background-color: #fff;
+}
+
+.profile__card-header {
+    height: 385px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.user__image-add {
+    font-size: 2rem;
+    margin: 1rem 1rem 0 0;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+}
+
+.user__image-add a {
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    padding: 8px 13px 13px 13px;
+    display: block;
+    height: 62px;
+    width: 58px;
+    position: relative;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.user__image-add a:hover {
+    transform: translateY(-5px);
+}
+
+.user__image-add a .fa-plus {
+    position: absolute;
+    font-size: 1.2rem;
+    top: 11px;
+    right: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.user__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card__user-profile-icon {
+    font-size: 20rem;
+}
+
+.profile__card-text {
+    font-size: 1.1rem;
+}
+
+/* ----------------- Border Bottom ----------------- */
+.border-bottom {
+    border-bottom: 1px solid #b1b1b1;
+}
+
+/* ----------------- Homeworks & Exams ----------------- */
+.homework__card-body,
+.exam__card-body {
+    overflow-y: auto;
+    height: 276px;
+}
+
+.homework-img,
+.exam-img {
+    width: 5rem;
+}
+
+.icon, .icon_exams {
+    width: 56px;
+    height: 56px;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background: var(--gradient-bg);
+    border-radius: 50%;
+    color: #fff;
+}
+
+.icon_exams {
+    padding-right: 18.3px;
+}
+
+/* ----------------- Modal ----------------- */
+.custom-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1050;
+    overflow-y: auto;
+}
+
+.modal-container {
+    background: white;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    overflow: hidden;
+    animation: modalFadeIn 0.3s;
+}
+
+.modal-header {
+    background: var(--gradient-bg);
+    color: var(--text-color);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 1.4rem;
+    width: 88%;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.close-btn:hover {
+    transform: scale(1.1);
+}
+
+.modal-body {
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.modal-content-text {
+    line-height: 1.6;
+    color: #333;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.scrollable-content {
+    text-align: justify;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.content-section {
+    margin-bottom: 1rem;
+}
+
+.content-section h5 {
+    color: #495057;
+    position: relative;
+    padding-bottom: 1.3rem;
+}
+
+.content-section h5::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-bg);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.btn-gradient {
+    padding: 0.2rem 1rem;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-bode-text {
+    max-width: 40%;
+}
+
+.div_btn-gradient {
+    position: relative;
+    z-index: 1;
+}
+
+.download-btn {
+    width: 127px;
+}
+
+/* ----------------- Homeworks & Exams ----------------- */
+.exams__card,
+.homeworks__card {
+    background-color: #fff;
+}
+
+.homework-items,
+.exam-items {
+    background-color: #ededed;
+    z-index: 0;
+    position: relative;
+    border-radius: 10px;
+}
+
+/* ---------- Pagination ---------- */
+.pagination button {
+    color: #000;
+    padding: 4px 12px;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background: #fff;
+}
+
+.pagination .btn__active{
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+}
+
+/* ----------------- Dark Mode ----------------- */
+.dark-mode .button,
+.dark-mode .button:hover {
+    color: #fff;
+}
+
+.dark-mode .homework-items,
+.dark-mode .exam-items {
+    background-color: #3a3a3a;
+}
+
+.dark-mode .user__image-add a {
+    background-color: #2d2d2d;
+    color: #fff;
+}
+
+.dark-mode .user__image-add a .fa-plus {
+    background-color: #2d2d2d;
+}
+
+.dark-mode .modal-container,
+.dark-mode .scrollable-content,
+.dark-mode .content-section {
+    background-color: #1a1a1a;
+}
+
+.dark-mode .modal-content-text,
+.dark-mode .content-section h5,
+.dark-mode .text-muted {
+    color: #e2e8f0 !important;
+}
+
+/* ----------------- Animations ----------------- */
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------------- Responsive ----------------- */
+@media (max-width: 991.98px) {
+    main::after { width: 23rem; height: 23rem; top: 21%; right: -14%; }
+}
+
+@media (max-width: 767px) {
+    .card__user-profile-icon { font-size: 15rem; padding-top: 3rem; }
+    .btn-gradient-change { font-size: 14px; }
+    .log_out-btn { width: 100%; }
+    .modal__close-btn { font-size: 1.5rem !important; }
+    a i.fas.fa-camera.icon__image-add, .user__image-add a { font-size: 2rem !important; }
+}
+
+@media (max-width: 576px) {
+    .homework-items,
+    .exam-items { flex-direction: column; align-items: flex-start; }
+
+    .card-bode-text { width: 100%;  margin: 0.5rem 0; text-align: center; }
+
+    .openModalBtn { align-self: center; margin-top: 0.5rem; }
+
+    .modal-container { margin: 10% auto; width: 95%; }
+    .modal-title { font-size: 1.2rem; }
+    .modal-body { padding: 15px;}
+}
+
+@media (max-width: 432px) {
+    .reponsive-btn {
+        width: 100%;
+    }
+
+    .reponsive-btn-mt a {
+        margin-top: 0px !important;
+    }
+}

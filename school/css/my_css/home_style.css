@@ -1,0 +1,651 @@
+/* css */
+:root {
+    --gradient-bg: linear-gradient(135deg, #3498db, #9b59b6);
+    --text-color: #fff;
+    --border-radius: 10px;
+}
+
+/* ----------------- button ----------------- */
+.div_btn-gradient{
+    z-index: 10;
+    position: relative;
+}
+
+/* ----------------- Menu Homeworks Exsams Table ----------------- */
+.table-responsive-md{
+    padding: 0px 3px 0.3px 3px;
+}
+
+th {
+    background-color: transparent !important;
+    color: var(--dark-mode-bg);
+    vertical-align: middle;
+}
+
+td {
+    background-color: #fff !important;
+    color: var(--dark-mode-bg);
+    vertical-align: middle;
+}
+
+td img {
+    width: 40px;
+}
+
+.a-z-indig {
+    position: relative;
+    z-index: 100;
+}
+
+thead tr{
+    border: transparent;
+}
+
+tbody tr {
+    position: relative;
+}
+
+tbody tr::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    right: 0px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+    bottom: 0;
+}
+
+/* استایل‌های ثابت برای اسلایدر */
+.hero-slider-container {
+    width: 100%;
+    max-width: 1320px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.hero-slider-container .carousel,
+.hero-slider-container .carousel-inner,
+.hero-slider-container .carousel-item {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slider-container .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-color: #000000ff;
+}
+
+/* ساختار اصلی اسلایدر */
+.slider-mobile-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    overflow: hidden;
+}
+
+.slider-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* نسبت 16:9 - میتوانید تغییر دهید */
+}
+
+.slider-original-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down; /* کلیدی ترین تغییر */
+    object-position: center;
+}
+/* تنظیمات اسلایدر */
+#mainCarousel {
+    background-color: #f8f9fa;
+}
+
+.modal__news-img{
+    max-height: 400px; 
+    width: auto;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.owl-carousel .owl-stage-outer {
+    border-radius: 10px;
+}
+
+.card-news {
+    width: 100%;
+    height: 440px;
+}
+
+.owl-dot span {
+    transition: background 0.3s ease-in;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.owl-dot.active span {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)) !important;
+    width: 30px !important;
+}
+
+.owl-dot:hover span {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)) !important;
+}
+
+.news-image:hover {
+    opacity: 0.9;
+}
+.news-content {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* استایل‌های اختصاصی */
+.homework {
+    min-height: 320px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.homework:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+.news-image img {
+    transition: transform 0.3s ease;
+}
+
+.homework:hover .news-image img {
+    transform: scale(1.05);
+}
+
+.news-image {
+    height: 250px;
+}
+
+.font {
+    font-size: 20px;
+    font-weight: 600;
+   
+}
+
+.font1 {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.news-card-date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+    height: 80px;
+}
+
+.news-link {
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    border: none;
+    border-radius: 30px;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+}
+/* استایل‌های بخش اطلاع رسانی */
+/* استایل‌های کارت خبر */
+.news__card-date{
+    color: rgba(33, 37, 41, 0.75);
+}
+
+.dark-mode .news__card-date{
+   color: rgba(176, 176, 176, 0.75);
+}
+
+.dark-mode .modal-content,
+.dark-mode .owl-theme .owl-dots .owl-dot span {
+    background-color: #2d2d2d !important;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    /* border: none; */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnails-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+    padding: 0 20px;
+      padding-top: 0px;
+    background: linear-gradient(360deg,black 17% ,#0000);
+    height: 100px;
+    padding-top: 2rem;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 60px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
+.responsive-map-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 75%; /* نسبت 4:3 */
+}
+
+.responsive-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-header {
+    background: var(--gradient-bg);
+    color: var(--text-color);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 1.4rem;
+    width: 88%;
+    word-wrap: break-word;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+}
+
+.modal-content-text {
+    line-height: 1.6;
+    color: #333;
+    white-space: normal; /* متن چند خطی */
+    word-wrap: break-word; /* شکستن کلمات طولانی */
+    overflow-wrap: break-word; /* استاندارد جدید برای شکستن کلمات */
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: var(--gradient-bg);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* استایل‌های مودال برای متن چند خطی */
+.custom-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1050;
+    overflow-y: auto; /* اسکرول عمودی برای مودال */
+}
+
+.modal-container {
+    background: white;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    animation: modalFadeIn 0.3s;
+}
+
+.customBody {
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto; /* اسکرول عمودی فقط برای محتوای طولانی */
+    overflow-x: hidden; /* غیرفعال کردن اسکرول افقی */
+    white-space: normal; /* اجازه شکستن خط */
+    word-wrap: break-word; /* شکستن کلمات طولانی */
+}
+
+/* استایل برای محتوای اسکرول پذیر */
+.scrollable-content {
+    overflow-y: auto; /* اسکرول عمودی برای محتوای طولانی */
+    overflow-x: hidden; /* غیرفعال کردن اسکرول افقی */
+    white-space: normal; /* متن چند خطی */
+    word-wrap: break-word; /* شکستن کلمات طولانی */
+}
+
+/* استایل برای بخش‌های محتوا */
+.content-section {
+    white-space: normal; /* متن چند خطی */
+    margin-bottom: 1rem;
+}
+
+.content-section h5 {
+    color: #495057;
+    position: relative;
+    white-space: normal; /* متن چند خطی */
+    padding-bottom: 1.3rem;
+}
+
+.content-section h5::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-bg);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.content-section div {
+    color: #000;
+}
+
+/* اما برای متن معمولی */
+.vertical-scroll {
+    overflow-x: hidden; /* غیرفعال کردن اسکرول افقی */
+    overflow-y: auto; /* فعال کردن اسکرول عمودی */
+    white-space: normal; /* متن چند خطی */
+    word-wrap: break-word;
+}
+
+.download-btn {
+    width: 160px;
+}
+
+.modal-body {
+    padding: 1rem;
+}
+
+/* استایل‌های اسلایدر */
+.slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* dark-mode for Modal */
+.dark-mode .modal-content-text,
+.dark-mode .login-alert .alert-content h5{
+    color: #fff;
+}
+
+.dark-mode .scrollable-content {
+    background: #1a1a1a;
+}
+
+.dark-mode .content-section,
+.dark-mode .login-alert {
+    background: #1a1a1a;
+}
+
+.dark-mode .modal-container {
+    background-color: #1a1a1a;
+}
+
+.dark-mode .content-section h5,
+.dark-mode .text-muted,
+.dark-mode .content-section div {
+    color: #e2e8f0 !important;
+}
+
+.dark-mode div:where(.swal2-container).swal2-top-end > .swal2-popup, div:where(.swal2-container).swal2-top-right > .swal2-popup {
+    background: #2d2d2d;
+    color: #fff;
+}
+
+.dark-mode .swal2-rtl .swal2-timer-progress-bar {
+    background: #fff;
+}
+
+.dark-mode div:where(.swal2-container) .swal2-timer-progress-bar-container {
+    background: #444;
+}
+
+.icon-container {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.card-icon {
+    font-size: 24px !important;
+    width: 10em;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----------------- Main Class ----------------- */
+.statement {
+    background: url("../../img/footer/school.jpg") no-repeat fixed center;
+    background-size: cover;
+    max-width: 2000;
+    width: 100%;
+}
+
+.statement .content-box-lg {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.tech-statement h3 {
+    color: #fff;
+    line-height: 45px;
+}
+
+.tech-statement-text {
+    font-size: 1.7rem !important;
+    margin-top: 0.5rem;
+}
+
+.main__statment {
+    position: relative;
+}
+
+.main__statment-border {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)) !important;
+}
+
+.main__statment-icon-student {
+    color: var(--primary-blue);
+}
+
+.main__statment-icon-teacher {
+    color: var(--primary-purple);
+}
+
+.main__class {
+    background: rgba(255, 245, 245, 0.4) !important;
+}
+
+.main__class-text {
+    font-size: 1.15rem;
+}
+
+@media (min-width: 1281px) {
+    .hero-slider-container {
+        height: 400px;
+    }
+}
+
+@media (max-width: 992px) {
+    .slider-mobile-container {
+        height: 600px;
+    }
+    .slider-image-wrapper {
+        max-width: 1200px;
+        padding-bottom: 0;
+        height: 100%;
+    }
+    
+    .responsive-map-container {
+        max-width: 600px;
+        height: 450px;
+        padding-top: 0;
+    }
+     .slider-container {
+        height: 300px; /* ارتفاع مناسب برای موبایل */
+    }
+}
+
+@media (max-width: 991px) {
+    .slider-mobile-container {
+        height: auto;
+        min-height: 300px;
+    }
+    .responsive-map-container {
+        height: 300px;
+        padding-top: 0;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #mainCarousel {
+        height: 300px;
+    }
+    .tech-statement-text {
+        font-size: 1.7rem !important;
+        margin-top: 0.5rem;
+    }
+
+    .close-btn {
+        font-size: 1.5rem !important;
+    }
+
+    div:where(.swal2-container) div:where(.swal2-popup) span,
+    .swal2-toast h2:where(.swal2-title) {
+        font-size: 1rem !important;
+    }
+    
+    .custom-close-btn i {
+        font-size: 1.2rem !important;
+    }
+
+    .table-responsive-md table {
+        min-width: 530px;
+    }
+}
+
+@media (max-width: 576px) {
+    #mainCarousel, 
+    .hero-slider-container,
+    .slider-container {
+        height: 250px;
+    }
+    /* Modal */
+    .modal-container {
+        margin: 10% auto;
+        width: 95%;
+    }
+    
+    .modal-title {
+        font-size: 1.2rem;
+    }
+    
+    .customBody {
+        padding: 15px;
+    }
+}

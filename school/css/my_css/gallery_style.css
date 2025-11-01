@@ -1,0 +1,185 @@
+/* ---------- Gallery Item ---------- */
+.gallery-item {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ---------- Thumbnails Overlay ---------- */
+.thumbnails-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+    padding: 2rem 20px 0;
+    background: linear-gradient(360deg, black 17%, #0000);
+    height: 100px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 60px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------- Gallery Main Image ---------- */
+.gallery-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+/* ---------- Fullscreen Overlay ---------- */
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10000;
+    background: rgba(0,0,0,0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ---------- Pagination ---------- */
+.pagination .page-item.active .page-link {
+    color: white;
+}
+
+.pagination .page-link {
+    color: #000;
+    background: transparent;
+    padding: 0.3rem 1rem;
+    border-radius: 50%;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.page-item.btn-gradient {
+    padding: 0;
+}
+
+.active-page {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+}
+
+/* ---------- Modal ---------- */
+#imageModal .modal-content {
+    border: none;
+}
+
+#imageModal .modal-body {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imageModal .btn-close {
+    filter: invert(1);
+    opacity: 0.8;
+}
+
+#imageModal .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.image-max-height {
+    max-height: 80vh;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #3498db, #9b59b6);
+}
+
+/* ---------- Dark Mode ---------- */
+.dark-mode .page-link,
+.dark-mode .page-link:hover {
+    color: #fff;
+}
+
+.dark-mode .active-page {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)) !important;
+}
+
+.dark-mode .modal-content {
+    background-color: #2d2d2d !important;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 575px) {
+    .gallery-item {
+        height: 250px !important;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .gallery-image {
+        height: 100% !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .gallery-item {
+        width: 100%;
+    }
+}

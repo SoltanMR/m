@@ -1,0 +1,338 @@
+:root {
+    --primary-blue: #3498db;
+    --secondary-blue: #2980b9;
+    --primary-purple: #9b59b6;
+    --secondary-purple: #8e44ad;
+    --dark-mode-bg: #1a1a1a;
+    --dark-mode-text: #f8f9fa;
+}
+
+p {
+    margin-bottom: 4px;
+}
+
+.report-card-container {
+    overflow-x: auto;
+}
+
+.report-card {
+    margin: 170px 0 20px;
+    min-width: 1296px;
+}
+
+.grades_font {
+    font-size: 12px;
+    font-weight: bold;
+    width: 638px;
+}
+
+.introduction, .report-card-footer {
+    border: 4px solid #000;
+}
+
+.introduction, .speach, .school_rate, .student_name, .school_name, .average_year, .average_month, .pass_falle {
+    border-bottom: 4px solid #000;
+}
+
+.contoury {
+    border-left: 4px solid #000;
+}
+
+.border-b-l, .border-b {
+    border-bottom: 2px solid #000;
+}
+
+.border-b-l, .border-l {
+    border-left: 2px solid #000;
+}
+
+.report-card-main, .student_grade {
+    border-left: 4px solid #000;
+    border-right: 4px solid #000;
+}
+
+.contoury, .city {
+    width: 657px;
+}
+
+.student_info, .year_info {
+    width: 328px;
+}
+
+.student_grade {
+    width: 657px;
+}
+
+.row_number, .qulety {
+    width: 54px;
+}
+
+.book_name {
+    width: 217px;
+}
+
+.grade, .how_is_it {
+    width: 108px;
+}
+
+.average_year {
+    width: 332px;
+}
+
+.average_year-name {
+    width: 219px;
+}
+
+.average_year-grade, .prograse {
+    width: 109px;
+}
+
+.print-button {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    text-decoration: none;
+  padding: 12px 28px;
+  background: linear-gradient(135deg,rgb(0, 0, 0),rgb(0, 0, 0));
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  border-radius: 1000px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'IRANSans', sans-serif;
+}
+.print-button:hover {
+  /* transform: translateY(-2px); */
+  box-shadow: 0 6px 16px rgba(131, 131, 131, 0.3);
+  color: white;
+  background: linear-gradient(135deg,rgb(0, 0, 0),rgb(28, 28, 28));
+  padding: 12px 60px;
+}
+
+
+@media print {
+  body {
+    overflow: visible !important;
+  }
+
+  .report-card-container {
+    overflow: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    text-decoration: none;
+  padding: 12px 28px;
+  background: linear-gradient(135deg,rgb(0, 0, 0),rgb(0, 0, 0));
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  border-radius: 1000px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'IRANSans', sans-serif;
+  
+}
+.back-button-container {
+margin-top: 3.5rem !important;
+position: fixed;
+/* background-color: #e6e6e6;
+padding: 36px 28px;
+border-radius: 10px;
+border: none;
+overflow: hidden;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease;
+background-color: #ededed; */
+}
+
+.back-button:hover {
+  /* transform: translateY(-2px); */
+  box-shadow: 0 6px 16px rgba(131, 131, 131, 0.3);
+  color: white;
+  background: linear-gradient(135deg,rgb(0, 0, 0),rgb(28, 28, 28));
+  padding: 12px 60px;
+}
+
+.back-button i {
+  font-size: 18px;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.back-button i:hover {
+    padding-left: 1rem;
+    padding-right: 0;
+}
+
+.custom-error {
+  background: linear-gradient(135deg, #6a00ff, #2d0076);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 25px;
+ border-radius: 100px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+ 
+  width: 30%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-size: 16px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+.error-container:nth-of-type(1) {
+  margin-top: 10rem;
+}
+
+.custom-error i {
+  margin-left: 8px;
+  font-size: 18px;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.error-container {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* یا flex-start برای چپ */
+  gap: 15px;
+  margin-top: 10px;
+  width: 100%;
+}
+.error-container:nth-of-type(1) {
+  margin-top: 1rem;
+}
+@media (max-width:710px){
+    .custom-error {
+  border-radius: 100px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.error-container {
+   
+  align-items: flex-end; /* یا flex-start برای چپ */
+  
+}
+.error-container:nth-of-type(1) {
+  margin-top: 10rem;
+}
+
+}
+@media (max-width:560px){
+    .custom-error {
+  
+  top: 130px;
+  right: auto;
+  left: 0;
+  width: 60%;
+}
+}
+@media (max-width:370px){
+    .custom-error {
+  border-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  width: 100%;
+}
+.back-button:hover{
+    padding: 12px 28px;
+}
+.print-button:hover {
+   padding: 12px 28px;
+}
+}
+
+/* استایل چاپ */
+@media print{
+  * {
+    font-size: 12px !important;
+  }
+  .report-card {
+      width: 800px;
+      min-width: 800px;
+  }
+  .grades_font {
+      font-size: 10px !important;
+      width: 486px;
+  }
+  .contoury, .city {
+      width: 500px;
+  }
+  
+  .student_info, .year_info {
+      width: 195px;
+  }
+  
+  .student_grade {
+      width: 430px;
+  }
+  
+  .row_number, .qulety {
+      width: 40px;
+  }
+  
+  .row_number, .grade, .how_is_it, .qulety, .book_name, .prograse, .average_year-grade{
+    font-size: 10px !important;
+  }
+  
+  .book_name {
+      width: 160px;
+  }
+  
+  .grade, .how_is_it {
+      width: 62px;
+  }
+  
+  .average_year {
+      width: 195px;
+  }
+  
+  .average_year-name {
+      width: 219px;
+  }
+  
+  .average_year-grade, .prograse {
+      width: 60px;
+  }
+  .custom-error i {
+    font-size: 14px !important;
+  }
+  
+  body{margin:0 !important; padding:0 !important; background:#fff}
+  * {margin:0 !important; padding:0 !important; gap: 0 !important;}
+
+  table {
+    margin:0 !important;
+    padding:0 !important;
+    min-width: 100% !important;
+  }
+}
+
+@page {
+  margin: 10px !important;
+  /* گاهی این باعث می‌شود مرورگر سربرگ/پاورقی را جا بیندازد */
+}
